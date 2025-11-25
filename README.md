@@ -26,7 +26,7 @@ GitHub Pages (Static Site) → API Gateway → AWS Lambda → AWS SES → Your E
 **Lambda Function:**
 - **Name**: `portfolio-contact-handler`
 - **Region**: `ap-southeast-1`
-- **Runtime**: `nodejs18.x`
+- **Runtime**: `nodejs20.x`
 - **Handler**: `index.handler`
 
 **API Gateway:**
@@ -51,7 +51,7 @@ When you make changes to `contact-email-handler.ts`, follow these steps:
 npx esbuild lambda/contact-email-handler.ts \
   --bundle \
   --platform=node \
-  --target=node18 \
+  --target=node20 \
   --format=esm \
   --outfile=lambda/index.js \
   '--external:@aws-sdk/*'

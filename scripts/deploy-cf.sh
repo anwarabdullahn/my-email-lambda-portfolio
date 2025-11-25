@@ -60,7 +60,7 @@ Resources:
     Type: AWS::Lambda::Function
     Properties:
       FunctionName: portfolio-contact-handler
-      Runtime: nodejs18.x
+      Runtime: nodejs20.x
       Handler: index.handler
       Role: !GetAtt LambdaExecutionRole.Arn
       Environment:

@@ -118,7 +118,7 @@ EOF
 npx esbuild contact-email-handler.ts \
     --bundle \
     --platform=node \
-    --target=node18 \
+    --target=node20 \
     --format=esm \
     --outfile=index.js \
     --external:@aws-sdk/* > /dev/null 2>&1
@@ -142,7 +142,7 @@ else
     echo "🆕 Creating new Lambda function..."
     aws lambda create-function \
         --function-name "$FUNCTION_NAME" \
-        --runtime "nodejs18.x" \
+        --runtime "nodejs20.x" \
         --role "$ROLE_ARN" \
         --handler "index.handler" \
         --zip-file "fileb://$ZIP_FILE" \
